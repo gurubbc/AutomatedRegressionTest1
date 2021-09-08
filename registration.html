@@ -1,0 +1,215 @@
+<html>
+    <head> 
+      <title> Customer Registration Page1 </title> 
+      <style> 
+        .one 
+        {
+            color:green
+                }
+      </style>
+      <script>
+
+            function checkPassword()
+            {
+                alert('checkPassword function is called')
+                // read the values from both password fields first
+                // we need to write logic to check whether both passwords are same
+                pwd1V=document.getElementById('pwd1').value
+                pwd2V=document.getElementById('pwd2').value
+                if (pwd1V==pwd2V)
+                {
+                    alert("yes, you have entered the same password...the data will be submitted to the server");
+                }
+                else
+                {
+                    alert("no, password & confirm password are not same")
+                    return false
+                }
+
+
+            }
+      </script>
+      <style>
+           h1,h2,span {
+               color: blue;
+               font-size: 25pt;
+           } 
+
+           h1 {
+               background-color: yellow;                
+           }
+
+           a {
+               color: rgb(65, 135, 100);
+               font-size:20pt;
+           }
+
+      </style>
+    </head>
+
+    <body>
+    <center>
+        <!-- this is the comment-->
+    <img src="registration-banner.png" height=100 width=200/>
+    <h1> Welcome to Customer Registration Page1 </h1>
+    <p class="one"> Kindly fill-in all mandatory <span style="color:red">(*)</span> fields </p>
+    <h2 class="one">This is h2 tag</h2>
+    <span> this is span tag</span>
+    <a class="one" href="/">Go Home</a>
+<form id='regForm' action="server-side-url" onsubmit="return checkPassword();">
+
+<div id="pers" style="border: orange; border-width: 5px; border-style:solid">
+    <table align="center">
+
+    <tr>
+        <td name='fn'>Enter firstname <span style="color:red">*</span> </td>
+        <td> <input id="fn" type="text" required autofocus></td>
+    </tr>
+    
+    <tr>
+        <td>Enter lastname</td>
+        <td>  <input id="ln" type="text"></td>
+    </tr>
+
+    <tr>
+        <td>Enter age</td>
+        <td>  <input type="number" min="10" max="50"></td>
+    </tr>
+
+
+    <tr>
+        <td>Enter username</td>
+        <td><input type="text" maxlength="10"></td>
+    </tr>
+
+    <tr>
+        <td>Enter password</td>
+        <td><input type="password" id='1pwd'></td>
+    </tr>
+    
+    <tr>
+        <td>Confirm password</td>
+        <td><input type="password" id='pwd2'></td>
+    </tr>    
+
+    <tr>
+    <td>Enter mobile number</td>
+    <td><input type="number"></td>
+    </tr>
+
+    <tr>
+    <td>Enter email id</td>
+    <td><input type="email"></td>
+    </tr>
+
+    <tr>
+    <td>Enter DOB </td>
+    <td><input type="date"></td>
+    </tr>
+
+    <tr>
+    <td>Select your gender</td>
+    <td><input type="radio" name="gender" checked="true">Male <input type="radio" name="gender">Female</td>
+    </tr>
+
+    <tr>
+    <td>Enter a valid URL</td>
+    <td><input type="url"/></td>
+    </tr>
+
+
+
+    <tr>
+    <td>
+    Which location you prefer?</td>
+    <td>
+                    <input type="checkbox" checked="true">Bangalore
+                    <input type="checkbox">Mumbai
+                    <input type="checkbox">Chennai
+                    <input type="checkbox" checked="true">NY
+                    <input type="checkbox">California
+    </td>
+    </tr>
+    <tr>
+    <td>
+    Select your citizenship:</td>
+    <td>
+                    <select>
+                        <option>India</option>
+                        <option>USA</option>
+                        <option  selected="true">UK</option>
+                    </select>        
+    </td>
+
+    </tr>
+    <tr>
+        <td>Enter your suggestions: </td>
+        <td><textarea rows="5" cols="50"></textarea></td>
+    </tr>
+
+
+    </table>
+</div>
+
+    <!-- The official information section starts here-->
+
+<div id="off" style="border: green; border-width: 5px; border-style:solid">
+<table align="center">
+    <tr>
+    <td>
+    Enter your employee id: 
+    </td>
+    <td>
+    <input type="text">
+    </td>
+    </tr>
+</table>
+</div>
+
+<!--3rd div tag-->
+
+<div style="background-color: grey">
+<h1> List of employees working in my project </h1>
+<table border="2">
+    <thead>
+        <th>Name</th>
+        <th>Location</th>
+        <th>State</th>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>Peter</td>
+            <td>Mumbai</td>
+            <td>MH</td>
+        </tr>
+
+        <tr>
+            <td>guru</td>
+            <td>Bangalore</td>
+            <td>KA</td>
+
+        </tr>
+
+        <tr>
+            <td>Peter</td>
+            <td>Mumbai</td>
+            <td>MH</td>
+
+        </tr>
+
+
+    </tbody>
+</table>
+
+
+</div>
+
+    <input id="sub" type="submit"/>
+
+
+
+</form>
+    </center>
+    </body>
+</html>
